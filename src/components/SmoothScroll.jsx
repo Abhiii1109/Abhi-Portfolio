@@ -5,7 +5,7 @@ export default function SmoothScroll({ children }) {
   return (
     <ReactLenis
       root
-      options={{ lerp: 0.08, duration: 1.4, smoothTouch: true, syncTouch: true, syncTouchLerp: 0.06 }}
+      options={{ lerp: 0.08, duration: 1.4, smoothTouch: false }}
     >
       {children}
     </ReactLenis>

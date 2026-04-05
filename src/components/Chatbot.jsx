@@ -85,7 +85,7 @@ export default function Chatbot() {
 
   return (
     <>
-      <div className="fixed bottom-6 right-6 md:bottom-12 md:right-12 z-[100] flex flex-col items-end">
+      <div className="fixed bottom-6 right-6 md:bottom-12 md:right-12 z-[100] flex flex-col items-end pointer-events-none">
         <AnimatePresence>
           {isOpen && (
             <motion.div
@@ -93,7 +93,7 @@ export default function Chatbot() {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 20, scale: 0.95 }}
               transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-              className="mb-6 w-[340px] md:w-[380px] bg-[#111] border border-white/10  shadow-2xl flex flex-col overflow-hidden backdrop-blur-2xl font-mono"
+              className="pointer-events-auto mb-6 w-[340px] md:w-[380px] bg-[#111] border border-white/10 shadow-2xl flex flex-col overflow-hidden backdrop-blur-2xl font-mono"
             >
               {/* Header */}
               <div className="bg-[#1a1a1a] flex items-center justify-between px-5 py-4 border-b border-white/5">
@@ -191,7 +191,7 @@ export default function Chatbot() {
                 ease: "easeInOut",
               }}
               onClick={() => setIsOpen(true)}
-              className="bg-[#0a0a0a] border border-white/10 shadow-[0_0_20px_rgba(0,0,0,0.5)] px-4 py-2.5 rounded-full flex items-center gap-3 cursor-pointer hover:border-white/30 transition-colors"
+              className="pointer-events-auto bg-[#0a0a0a] border border-white/10 shadow-[0_0_20px_rgba(0,0,0,0.5)] px-4 py-2.5 rounded-full flex items-center gap-3 cursor-pointer hover:border-white/30 transition-colors"
             >
               <span className="w-1.5 h-1.5 rounded-full bg-[#ff3333] animate-pulse"></span>
               <span className="text-white text-[10px] sm:text-xs font-mono tracking-widest uppercase">
@@ -205,7 +205,7 @@ export default function Chatbot() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => setIsOpen(true)}
-              className="group relative w-14 h-14 md:w-16 md:h-16 rounded-full bg-[#0a0a0a] flex items-center justify-center cursor-pointer shadow-2xl z-50 transition-all duration-300 border border-white/10 hover:border-white/30"
+              className="pointer-events-auto group relative w-14 h-14 md:w-16 md:h-16 rounded-full bg-[#0a0a0a] flex items-center justify-center cursor-pointer shadow-2xl z-50 transition-all duration-300 border border-white/10 hover:border-white/30"
             >
               {/* Minimalist Glow Effect */}
               <div className="absolute inset-[-1px] rounded-full bg-white/0 group-hover:bg-[#ff3333]/20 transition-all duration-500 blur-md" />

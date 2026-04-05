@@ -84,7 +84,7 @@ export default function Skills() {
              <span className="w-2 h-2 bg-[#ff3333] inline-block animate-pulse"></span>
              Tech Stack
           </h2>
-          <h3 className="text-5xl sm:text-7xl md:text-8xl lg:text-[100px] font-black tracking-tighter uppercase leading-[0.9] text-white font-[family-name:var(--font-space-grotesk)] -ml-1">
+          <h3 className="text-5xl sm:text-7xl md:text-8xl lg:text-[100px] font-black tracking-tighter uppercase leading-[0.9] text-white font-(family-name:--font-space-grotesk) -ml-1">
             SKILLS.
           </h3>
         </div>

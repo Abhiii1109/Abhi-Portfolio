@@ -54,7 +54,7 @@ export default function About() {
         <div className="w-full md:w-9/12">
           <p
             ref={textRef}
-            className="text-xl md:text-3xl lg:text-4xl text-gray-300 font-light leading-[1.4] tracking-tight font-[family-name:var(--font-space-grotesk)] flex flex-wrap gap-x-[0.3em] gap-y-1.5 w-full"
+            className="text-xl md:text-3xl lg:text-4xl text-gray-300 font-light leading-[1.4] tracking-tight font-(family-name:--font-space-grotesk) flex flex-wrap gap-x-[0.3em] gap-y-1.5 w-full"
           >
             {text.map((word, i) => (
               <span

@@ -59,7 +59,7 @@ export default function Projects() {
       className="py-24 md:py-48 px-0 w-full mx-auto border-t border-white/10 relative bg-[#030303] overflow-hidden"
     >
       <div className="mb-20 md:mb-32 px-6 md:px-16 relative z-10 max-w-[1800px] mx-auto text-center md:text-left ">
-        <h3 className="text-4xl sm:text-5xl md:text-7xl font-black tracking-tighter uppercase leading-[0.9] text-white font-[family-name:var(--font-space-grotesk)] ml-0">
+        <h3 className="text-4xl sm:text-5xl md:text-7xl font-black tracking-tighter uppercase leading-[0.9] text-white font-(family-name:--font-space-grotesk) ml-0">
           SELECTED WORKS.
         </h3>
       </div>
@@ -86,7 +86,7 @@ export default function Projects() {
               </div>
 
               {/* Project Details */}
-              <h4 className="text-white text-4xl lg:text-5xl font-black uppercase tracking-tighter mb-4 font-[family-name:var(--font-space-grotesk)] leading-[0.9]">
+              <h4 className="text-white text-4xl lg:text-5xl font-black uppercase tracking-tighter mb-4 font-(family-name:--font-space-grotesk) leading-[0.9]">
                 {proj.title}
               </h4>
               <p className="text-gray-300 font-light leading-relaxed text-sm lg:text-base font-sans mix-blend-screen">
@@ -121,7 +121,7 @@ export default function Projects() {
             key={i}
             onMouseEnter={() => setHoveredIndex(i)}
             onMouseLeave={() => setHoveredIndex(null)}
-            className={`group mx-auto max-w-[1800px] flex flex-col lg:flex-row items-start lg:items-center justify-between w-full border-b border-white/10 py-6 md:py-8 px-6 md:px-12 transition-colors duration-300 relative cursor-none hover:bg-white/[0.02]`}
+            className={`group mx-auto max-w-[1800px] flex flex-col lg:flex-row items-start lg:items-center justify-between w-full border-b border-white/10 py-6 md:py-8 px-6 md:px-12 transition-colors duration-300 relative cursor-none hover:bg-white/2`}
           >
             {/* Left Side: Massive Text */}
             <div className="flex items-start lg:items-center gap-6 md:gap-8 w-full lg:w-auto relative mb-4 lg:mb-0 z-10">
@@ -137,7 +137,7 @@ export default function Projects() {
                 className="block relative"
               >
                 <h3
-                  className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold uppercase tracking-tight transition-all duration-300 leading-tight origin-left text-white group-hover:translate-x-4 font-[family-name:var(--font-space-grotesk)]`}
+                  className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold uppercase tracking-tight transition-all duration-300 leading-tight origin-left text-white group-hover:translate-x-4 font-(family-name:--font-space-grotesk)`}
                 >
                   {proj.title}
                 </h3>
@@ -155,7 +155,7 @@ export default function Projects() {
                 rel="noreferrer"
                 className={`w-10 h-10 md:w-14 md:h-14 rounded-full border flex items-center justify-center shrink-0 group-hover:-rotate-45 group-hover:scale-110 transition-all duration-500 cursor-none
                    border-white/20 bg-black/50 text-white
-                   group-hover:bg-white group-hover:text-black group-hover:border-transparent drop-shadow-2xl hover:!text-black
+                   group-hover:bg-white group-hover:text-black group-hover:border-transparent drop-shadow-2xl hover:text-black!
                `}
               >
                 <svg

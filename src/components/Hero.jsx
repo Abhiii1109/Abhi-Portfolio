@@ -46,9 +46,9 @@ export default function Hero() {
           <div className="h-[1px] w-full bg-white/20"></div>
 
           <p className="text-gray-300 font-light text-sm md:text-base leading-relaxed">
-            I craft incredibly smooth, aesthetic, and fully functional digital
-            experiences. Currently pursuing BCA (2028), driven by a massive
-            ambition to build the future of the web.
+            I craft incredibly smooth, User friendly, and fully functional
+            digital experiences. Currently pursuing BCA (2028), driven by a
+            massive ambition to build the future of the web.
           </p>
 
           <Magnetic className="mt-4 md:mt-6 w-fit inline-block">
@@ -59,11 +59,18 @@ export default function Hero() {
               className="border border-white/20 w-fit px-6 md:px-8 py-3 md:py-4 rounded-full text-[10px] md:text-xs tracking-widest uppercase font-mono hover:bg-white hover:text-black transition-colors flex items-center gap-3 cursor-none group bg-white/5"
             >
               Get My Resume
-              <svg 
-                className="w-4 h-4 group-hover:translate-y-0.5 transition-transform" 
-                fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}
+              <svg
+                className="w-4 h-4 group-hover:translate-y-0.5 transition-transform"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
               >
-                <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
+                />
               </svg>
             </a>
           </Magnetic>

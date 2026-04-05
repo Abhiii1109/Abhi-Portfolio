@@ -1,6 +1,7 @@
 "use client";
 import { Link2 } from "lucide-react";
 import { useState } from "react";
+import { RevealHeading, FadeUp, SlideLeft, StaggerList, StaggerItem } from "./Animations";
 
 const projects = [
   {
@@ -59,9 +60,14 @@ export default function Projects() {
       className="py-24 md:py-48 px-0 w-full mx-auto border-t border-white/10 relative bg-[#030303] overflow-hidden"
     >
       <div className="mb-20 md:mb-32 px-6 md:px-16 relative z-10 max-w-[1800px] mx-auto text-center md:text-left ">
-        <h3 className="text-4xl sm:text-5xl md:text-7xl font-black tracking-tighter uppercase leading-[0.9] text-white font-(family-name:--font-space-grotesk) ml-0">
-          SELECTED WORKS.
-        </h3>
+        <SlideLeft>
+          <p className="text-[#ff3333] font-mono text-xs tracking-widest uppercase mb-4">Selected Works</p>
+        </SlideLeft>
+        <RevealHeading>
+          <h3 className="text-4xl sm:text-5xl md:text-7xl font-black tracking-tighter uppercase leading-[0.9] text-white font-(family-name:--font-space-grotesk) ml-0">
+            SELECTED WORKS.
+          </h3>
+        </RevealHeading>
       </div>
 
       {/* Highly Aesthetic Floating Glassmorphism Info Card */}
@@ -115,14 +121,14 @@ export default function Projects() {
       </div>
 
       {/* Ultra-Premium Brutalist Row List */}
-      <div className="flex flex-col w-full relative z-10 group/list border-t border-white/10 mt-12 md:mt-20">
+      <StaggerList className="flex flex-col w-full relative z-10 group/list border-t border-white/10 mt-12 md:mt-20">
         {projects.map((proj, i) => (
-          <div
-            key={i}
-            onMouseEnter={() => setHoveredIndex(i)}
-            onMouseLeave={() => setHoveredIndex(null)}
-            className={`group mx-auto max-w-[1800px] flex flex-col lg:flex-row items-start lg:items-center justify-between w-full border-b border-white/10 py-6 md:py-8 px-6 md:px-12 transition-colors duration-300 relative cursor-none hover:bg-white/2`}
-          >
+          <StaggerItem key={i}>
+            <div
+              onMouseEnter={() => setHoveredIndex(i)}
+              onMouseLeave={() => setHoveredIndex(null)}
+              className={`group mx-auto max-w-[1800px] flex flex-col lg:flex-row items-start lg:items-center justify-between w-full border-b border-white/10 py-6 md:py-8 px-6 md:px-12 transition-colors duration-300 relative cursor-none hover:bg-white/2`}
+            >
             {/* Left Side: Massive Text */}
             <div className="flex items-start lg:items-center gap-6 md:gap-8 w-full lg:w-auto relative mb-4 lg:mb-0 z-10">
               <span
@@ -174,9 +180,10 @@ export default function Projects() {
                 </svg>
               </a>
             </div>
-          </div>
+            </div>
+          </StaggerItem>
         ))}
-      </div>
+      </StaggerList>
     </section>
   );
 }

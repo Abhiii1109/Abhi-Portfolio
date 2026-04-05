@@ -1,6 +1,7 @@
 "use client";
 import { Send } from "lucide-react";
 import Magnetic from "./Magnetic";
+import { FadeUp, RevealHeading, SlideLeft } from "./Animations";
 
 export default function Contact() {
   return (
@@ -10,22 +11,26 @@ export default function Contact() {
     >
       <div className="flex-1 flex flex-col xl:flex-row justify-center md:items-center z-10 gap-12 md:gap-32 w-full max-w-[1800px] mx-auto font-(family-name:--font-space-grotesk)">
         <div className="flex flex-col w-full xl:w-1/2 shrink-0">
-          <p className="font-mono text-xs tracking-widest text-red-500 uppercase mb-6 md:mb-8 border-l-2 border-red-500 pl-4">
-            Let's Connect
-          </p>
-          <a
-            href="https://mail.google.com/mail/?view=cm&fs=1&to=abhiprajapati1106@gmail.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[13vw] xl:text-[10vw] font-black leading-[0.85] uppercase tracking-tighter hover:text-white/70 transition-colors block text-white"
-          >
-            SAY
-            <br />
-            HELLO.
-          </a>
+          <SlideLeft>
+            <p className="font-mono text-xs tracking-widest text-red-500 uppercase mb-6 md:mb-8 border-l-2 border-red-500 pl-4">
+              Let's Connect
+            </p>
+          </SlideLeft>
+          <RevealHeading>
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=abhiprajapati1106@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[13vw] xl:text-[10vw] font-black leading-[0.85] uppercase tracking-tighter hover:text-white/70 transition-colors block text-white"
+            >
+              SAY
+              <br />
+              HELLO.
+            </a>
+          </RevealHeading>
         </div>
 
-        <div className="flex flex-col gap-8 md:mb-4 max-w-lg mt-8 xl:mt-0 font-sans w-full xl:w-1/2">
+        <FadeUp delay={0.2} className="flex flex-col gap-8 md:mb-4 max-w-lg mt-8 xl:mt-0 font-sans w-full xl:w-1/2">
           <p className="text-gray-400 font-light leading-relaxed text-lg md:text-2xl">
             I am actively looking for new opportunities and freelance projects.
             If you have an exciting vision, don't hesitate to reach out. We can
@@ -42,7 +47,7 @@ export default function Contact() {
               <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
           </Magnetic>
-        </div>
+        </FadeUp>
       </div>
 
       <div className="relative z-50 w-full flex flex-col md:flex-row justify-between items-center text-[10px] md:text-xs tracking-widest font-mono text-gray-500 uppercase py-8 border-t border-white/10 gap-6 md:gap-0 max-w-[1800px] mx-auto text-center md:text-left">

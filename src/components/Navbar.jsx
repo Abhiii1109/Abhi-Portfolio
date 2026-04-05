@@ -1,10 +1,17 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link2, Menu, X } from "lucide-react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 50);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <>
@@ -12,7 +19,11 @@ export default function Navbar() {
         initial={{ y: -50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-        className="fixed top-0 left-0 w-full z-50 px-6 md:px-16 py-6 md:py-8 flex justify-between items-center mix-blend-difference"
+        className={`fixed top-0 left-0 w-full z-50 px-6 md:px-16 py-6 md:py-8 flex justify-between items-center transition-all duration-500 ${
+          scrolled
+            ? "bg-[#050505]/80 backdrop-blur-md border-b border-white/5 mix-blend-normal"
+            : "mix-blend-difference"
+        }`}
       >
         <div className="font-bold text-lg md:text-xl tracking-tight uppercase text-white">
           ABHI. 

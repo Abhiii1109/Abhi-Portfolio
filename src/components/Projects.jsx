@@ -61,7 +61,7 @@ export default function Projects() {
     >
       <div className="mb-20 md:mb-32 px-6 md:px-16 relative z-10 max-w-[1800px] mx-auto text-center md:text-left ">
         <SlideLeft>
-          <p className="text-[#ff3333] font-mono text-xs tracking-widest uppercase mb-4">Selected Works</p>
+          <p className="text-[#ff3333] font-mono text-xs tracking-widest uppercase mb-4">FEATURED</p>
         </SlideLeft>
         <RevealHeading>
           <h3 className="text-4xl sm:text-5xl md:text-7xl font-black tracking-tighter uppercase leading-[0.9] text-white font-(family-name:--font-space-grotesk) ml-0">

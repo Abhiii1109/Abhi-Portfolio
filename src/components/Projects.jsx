@@ -1,7 +1,13 @@
 "use client";
 import { Link2 } from "lucide-react";
 import { useState } from "react";
-import { RevealHeading, FadeUp, SlideLeft, StaggerList, StaggerItem } from "./Animations";
+import {
+  RevealHeading,
+  FadeUp,
+  SlideLeft,
+  StaggerList,
+  StaggerItem,
+} from "./Animations";
 
 const projects = [
   {
@@ -61,7 +67,7 @@ export default function Projects() {
     >
       <div className="mb-20 md:mb-32 px-6 md:px-16 relative z-10 max-w-[1800px] mx-auto text-center md:text-left ">
         <SlideLeft>
-          <p className="text-[#ff3333] font-mono text-xs tracking-widest uppercase mb-4">FEATURED</p>
+          <p className="text-[#ff3333] font-mono text-xs tracking-widest uppercase mb-4">What I Ship</p>
         </SlideLeft>
         <RevealHeading>
           <h3 className="text-4xl sm:text-5xl md:text-7xl font-black tracking-tighter uppercase leading-[0.9] text-white font-(family-name:--font-space-grotesk) ml-0">
@@ -129,57 +135,57 @@ export default function Projects() {
               onMouseLeave={() => setHoveredIndex(null)}
               className={`group mx-auto max-w-[1800px] flex flex-col lg:flex-row items-start lg:items-center justify-between w-full border-b border-white/10 py-6 md:py-8 px-6 md:px-12 transition-colors duration-300 relative cursor-none hover:bg-white/2`}
             >
-            {/* Left Side: Massive Text */}
-            <div className="flex items-start lg:items-center gap-6 md:gap-8 w-full lg:w-auto relative mb-4 lg:mb-0 z-10">
-              <span
-                className={`font-mono text-sm md:text-lg tracking-widest shrink-0 font-bold opacity-40 group-hover:opacity-100 transition-opacity duration-500  text-[#ff3333]`}
-              >
-                0{i + 1}
-              </span>
-              <a
-                href={proj.demo !== "#" ? proj.demo : proj.github}
-                target="_blank"
-                rel="noreferrer"
-                className="block relative"
-              >
-                <h3
-                  className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold uppercase tracking-tight transition-all duration-300 leading-tight origin-left text-white group-hover:translate-x-4 font-(family-name:--font-space-grotesk)`}
+              {/* Left Side: Massive Text */}
+              <div className="flex items-start lg:items-center gap-6 md:gap-8 w-full lg:w-auto relative mb-4 lg:mb-0 z-10">
+                <span
+                  className={`font-mono text-sm md:text-lg tracking-widest shrink-0 font-bold opacity-40 group-hover:opacity-100 transition-opacity duration-500  text-[#ff3333]`}
                 >
-                  {proj.title}
-                </h3>
-              </a>
-            </div>
+                  0{i + 1}
+                </span>
+                <a
+                  href={proj.demo !== "#" ? proj.demo : proj.github}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="block relative"
+                >
+                  <h3
+                    className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold uppercase tracking-tight transition-all duration-300 leading-tight origin-left text-white group-hover:translate-x-4 font-(family-name:--font-space-grotesk)`}
+                  >
+                    {proj.title}
+                  </h3>
+                </a>
+              </div>
 
-            {/* Right Side: Clean Arrow */}
-            <div
-              className={`flex items-center justify-end w-full lg:w-auto pl-12 lg:pl-0 z-10 lg:ml-auto`}
-            >
-              {/* Awwwards Arrow Anchor */}
-              <a
-                href={proj.demo !== "#" ? proj.demo : proj.github}
-                target="_blank"
-                rel="noreferrer"
-                className={`w-10 h-10 md:w-14 md:h-14 rounded-full border flex items-center justify-center shrink-0 group-hover:-rotate-45 group-hover:scale-110 transition-all duration-500 cursor-none
+              {/* Right Side: Clean Arrow */}
+              <div
+                className={`flex items-center justify-end w-full lg:w-auto pl-12 lg:pl-0 z-10 lg:ml-auto`}
+              >
+                {/* Awwwards Arrow Anchor */}
+                <a
+                  href={proj.demo !== "#" ? proj.demo : proj.github}
+                  target="_blank"
+                  rel="noreferrer"
+                  className={`w-10 h-10 md:w-14 md:h-14 rounded-full border flex items-center justify-center shrink-0 group-hover:-rotate-45 group-hover:scale-110 transition-all duration-500 cursor-none
                    border-white/20 bg-black/50 text-white
                    group-hover:bg-white group-hover:text-black group-hover:border-transparent drop-shadow-2xl hover:text-black!
                `}
-              >
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="w-4 h-4 md:w-5 md:h-5"
                 >
-                  <line x1="5" y1="12" x2="19" y2="12"></line>
-                  <polyline points="12 5 19 12 12 19"></polyline>
-                </svg>
-              </a>
-            </div>
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="w-4 h-4 md:w-5 md:h-5"
+                  >
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
+              </div>
             </div>
           </StaggerItem>
         ))}

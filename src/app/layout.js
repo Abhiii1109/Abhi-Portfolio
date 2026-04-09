@@ -12,6 +12,8 @@ export const metadata = {
   description: "Amazing portfolio of Abhi Prajapati, a passionate MERN stack developer and BCA student.",
 };
 
+import { Analytics } from "@vercel/analytics/react";
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="dark" suppressHydrationWarning>
@@ -20,6 +22,7 @@ export default function RootLayout({ children }) {
           <SmoothScroll>
             <CustomCursor />
             {children}
+            <Analytics />
           </SmoothScroll>
         </Preloader>
       </body>

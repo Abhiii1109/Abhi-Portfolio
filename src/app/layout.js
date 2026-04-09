@@ -12,7 +12,7 @@ export const metadata = {
   description: "Amazing portfolio of Abhi Prajapati, a passionate MERN stack developer and BCA student.",
 };
 
-import { Analytics } from "@vercel/analytics/react";
+import { Analytics } from "@vercel/analytics/next";
 
 export default function RootLayout({ children }) {
   return (

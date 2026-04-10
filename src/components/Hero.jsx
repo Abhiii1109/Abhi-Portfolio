@@ -53,7 +53,7 @@ export default function Hero() {
 
           <Magnetic className="mt-4 md:mt-6 w-fit inline-block">
             <a
-              href="https://drive.google.com/file/d/1q37MFjS6XA7d2e0g3lzvSFyjNk_Zifud/view?usp=sharing"
+              href="https://drive.google.com/file/d/1wWB_IsXzalLWYV1nDZYwMJS68X4EPBZr/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="border border-white/20 w-fit px-6 md:px-8 py-3 md:py-4 rounded-full text-[10px] md:text-xs tracking-widest uppercase font-mono hover:bg-white hover:text-black transition-colors flex items-center gap-3 cursor-none group bg-white/5"
